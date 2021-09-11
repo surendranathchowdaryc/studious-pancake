@@ -1,7 +1,7 @@
 
 # SpringBoot App With Actuator and Swagger
 
-Simple springboot app that has actuautor and swagger.
+Simple springboot app that covers the basics required to understand actuautor and swagger-ui.
 
 
 ## Installation
