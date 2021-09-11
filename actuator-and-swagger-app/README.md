@@ -10,7 +10,7 @@ From Spring Initialiser project add
 + spring-boot-starter-actuator(https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
 + spring-boot-starter-web
 + spring-boot-devtools
-+ `springdoc-openapi-ui` pesent at https://springdoc.org/ so we would get swagger rest documentation capabilities 
+Then add `springdoc-openapi-ui` pesent at https://springdoc.org/ so we would get swagger rest documentation capabilities in `pom.xml`
 
 ```bash
     <dependency>
