@@ -13,10 +13,10 @@ We use Spring Initializer to create the springboot starter project.
 The depedency used here would be
 
 ```bash
-    <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
+    	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+	</dependency>
 ```
 
 We use `application.yml` and it's structure would be like below
