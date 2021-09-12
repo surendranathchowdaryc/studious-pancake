@@ -7,6 +7,6 @@ import com.example.springcloud.fruitinfoservice.bean.FruitFromFruitInfoService;
 
 @FeignClient(name="fruit-color-extractor-service")
 public interface ProxyFruitColorExtractorController {
-    @GetMapping(value="/color/{fruit}")
+    @GetMapping(value="/fruit-color-extractor/color/{fruit}")
     public FruitFromFruitInfoService getFruitColorObject(@PathVariable String fruit);
 }

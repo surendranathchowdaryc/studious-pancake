@@ -20,7 +20,7 @@ public class FruitColorExtractorController {
     @Autowired
     private ServletWebServerApplicationContext servletWebServerApplicationContext;
     
-    @GetMapping(value="/color/{fruit}")
+    @GetMapping(value="/fruit-color-extractor/color/{fruit}")
     public Fruit getFruitColorObject(@PathVariable String fruit) {
         Fruit f = FruitColorExtractorController.getFruitInfo(fruit);
         f.setPort(String.valueOf(servletWebServerApplicationContext.getWebServer().getPort()));

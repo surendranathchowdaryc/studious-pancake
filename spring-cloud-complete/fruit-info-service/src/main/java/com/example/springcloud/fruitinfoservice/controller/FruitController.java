@@ -12,7 +12,7 @@ public class FruitController {
     @Autowired
     private ProxyFruitColorExtractorController proxyFruitColorExtractorController;
     
-    @GetMapping("/fruit/{name}")
+    @GetMapping("/fruit-info/fruit/{name}")
     public FruitFromFruitInfoService getFruitInfo(@PathVariable String name) {
         FruitFromFruitInfoService fruitFromFruitInfoService = proxyFruitColorExtractorController.getFruitColorObject(name);
         return fruitFromFruitInfoService;
