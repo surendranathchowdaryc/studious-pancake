@@ -13,10 +13,10 @@ We use Spring Initializer to create the springboot starter project.
 The depedency used here would be
 
 ```bash
-    <dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
+    	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+	</dependency>
 ```
 
 We use `application.yml` and it's structure would be like below
@@ -34,5 +34,17 @@ We use `application.yml` and it's structure would be like below
 ```
 
 In the above `yml` file, we don't want to register eureka server as a client in itself, so we are setting `eureka.client` properties as well.
+
+Also important step is to use the annotation `@EnableEurekaServer` in the application as below
+```bash
+    	@EnableEurekaServer
+	@SpringBootApplication
+	public class EurekaNamingServerServiceApplication {
+
+		public static void main(String[] args) {
+			SpringApplication.run(EurekaNamingServerServiceApplication.class, args);
+		}
+	}
+```
 
 All set correctly, you can deploy on `http://localhost:8761`
