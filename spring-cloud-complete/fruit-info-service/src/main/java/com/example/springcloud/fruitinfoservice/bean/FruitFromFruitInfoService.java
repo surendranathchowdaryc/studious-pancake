@@ -1,5 +1,8 @@
 package com.example.springcloud.fruitinfoservice.bean;
 
+/**
+ * This bean is created to capture the response sent by calling fruit-color-extractor-service
+ */
 public class FruitFromFruitInfoService {
     private String name;
     private String color;

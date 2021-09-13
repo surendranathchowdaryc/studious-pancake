@@ -32,6 +32,9 @@ public class FruitColorExtractorController {
         return "welcome to fruit-color-service";
     }
 
+    /**
+     * super simple method to simulate the database
+     */
     private static Fruit getFruitInfo(String fruit) {
         Map<String, String> map = Stream.of(new String[][] {
             { "apple", "red/green/yellow" }, 

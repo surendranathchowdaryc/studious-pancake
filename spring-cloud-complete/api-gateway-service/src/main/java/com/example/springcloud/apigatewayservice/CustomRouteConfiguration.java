@@ -5,7 +5,9 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
+/**
+ * Route the requestes to the correct micro-service 
+ */
 @Configuration
 public class CustomRouteConfiguration {
    @Bean

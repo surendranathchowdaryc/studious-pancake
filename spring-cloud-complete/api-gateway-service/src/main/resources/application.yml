@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ap-gateway-service
+    name: api-gateway-service
 server:
   port: 0
 eureka:
