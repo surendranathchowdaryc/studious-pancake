@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+    docker-simple-hello-world:
+        build:
+            context: docker-simple-hello-world
+            dockerfile: Dockerfile
+        image: docker-simple-hello-world:latest
+        ports:
+            - 3000:3000
+        networks:
+            - docker-cloud-network
+    fruit-color-extractor-service:
+        build:
+            context: fruit-color-extractor-service
+            dockerfile: Dockerfile
+        image: fruit-color-extractor-service:latest
+        ports:
+            - 4000:4000
+        networks:
+            - docker-cloud-network
+    fruit-info-service:
+        build:
+            context: fruit-info-service
+            dockerfile: Dockerfile
+        image: fruit-info-service:latest
+        ports:
+            - 5000:5000
+        environment:
+          FRUIT_COLOR_SERVICE_HOST: http://fruit-color-extractor-service
+        depends_on:
+          - fruit-color-extractor-service
+        networks:
+            - docker-cloud-network
+networks:
+    docker-cloud-network:
+        driver: bridge
